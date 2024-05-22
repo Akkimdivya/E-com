@@ -76,7 +76,7 @@ const ProductItem = () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${product.title} has been bookmarked!`);
+    alert(`${product.title} has been added to cart!`);
   };
   const handleBookmark = (product) => {
     let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
