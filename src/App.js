@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './components/Home';
+import ProductItem from './components/ProductItem';
+import { FurrlProvider } from './context/furrlContext';
 import './App.css';
+import Cart from './components/Cart/Cart';
+import Bookmark from './components/Bookmark';
+import Notfound from './components/Notfound/Notfound';
+import NavBar from './components/NavBar';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <FurrlProvider>
+        <NavBar/>
+        <Routes>
+          <Route exact path='/' Component={Home} />
+          <Route exact path='/productitem/:id' Component={ProductItem} />
+          <Route exact path='/cart' Component={Cart} />
+          <Route exact path='/bookmark' Component={Bookmark} />
+          <Route path='*' Component={Notfound}/>
+        </Routes>
+      </FurrlProvider>
+    </BrowserRouter>
+  )
 }
-
 export default App;

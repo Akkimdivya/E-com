@@ -1,0 +1,45 @@
+/* index.css */
+
+/* Base styles */
+.card-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card1 {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .image-size {
+    width: 100%;
+    height: auto;
+  }
+  
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self:flex-end;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .card1 {
+      width: 45%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .card1 {
+      width: 100%;
+    }
+  }
+  
