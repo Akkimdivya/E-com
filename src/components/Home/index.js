@@ -47,8 +47,7 @@ const Home = () => {
         <h1 className='title-bar-header'>Shop Products</h1>
 
         <div className='count'>
-          <span className='point'>&bull;</span>
-          <span className='c'>1080 Products</span>
+          <span className='c'>Products</span>
         </div>
 
       </div>
